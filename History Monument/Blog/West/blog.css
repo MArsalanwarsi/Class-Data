@@ -1,0 +1,22 @@
+#footer_links li a {
+  text-decoration: none;
+  color: black;
+}
+#footer_links li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 20%;
+  cursor: pointer;
+  color: #dc3545;
+}
+.card-body:hover .card-text {
+  color: #dc3545;
+  cursor: pointer;
+}
+.card-body:hover .card-title {
+  text-decoration: underline;
+  text-underline-offset: 20%;
+  cursor: pointer;
+}
+.card-text {
+  transition: color 0.5s linear;
+}

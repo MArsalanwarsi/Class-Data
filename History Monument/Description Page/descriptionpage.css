@@ -1,0 +1,10 @@
+#footer_links li a {
+  text-decoration: none;
+  color: black;
+}
+#footer_links li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 20%;
+  cursor: pointer;
+  color: #dc3545;
+}

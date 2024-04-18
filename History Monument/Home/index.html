@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>History Monument</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid d-flex align-items-center justify-content-center " style="height: 90px;">
+            <h3 class="font-effect-emboss" style=" font-family: Sofia; font-size: 40px;">Historical Monuments</h3>
+        </div>
+        <div class="container-fluid position-relative" style="height: 60px;">
+            <div class=" d-flex position-absolute start-0 navbar-expand-lg">
+                <div class="collapse navbar-collapse" id="socialcollapse">
+                    <!-- social links -->
+                    <a class="btn btn-group me-2 icon-link-hover"><i class="bi bi-facebook fs-4 "></i><span
+                            class="form-label mt-2 ms-2 ">Facebook</span></a>
+                    <a class="btn btn-group me-2 icon-link-hover"><i class="bi bi-twitter fs-4"></i><span
+                            class="form-label mt-2 ms-2">Twitter</span></a>
+                    <a class="btn btn-group me-2 icon-link-hover"><i class="bi bi-linkedin fs-4"></i><span
+                            class="form-label mt-2 ms-2">Linkedin</span></a>
+                    <a class="btn btn-group me-2 icon-link-hover"><i class="bi bi-github fs-4"></i><span
+                            class="form-label mt-2 ms-2">Github</span></a>
+                </div>
+            </div>
+            <div class="d-flex pe-4 position-absolute end-0 navbar-expand-lg">
+                <button class="navbar-toggler p-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#registerlogininfo" aria-controls="registerlogininfo" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-door-open"></i>
+                    Login/Register
+                </button>
+                <div class="collapse navbar-collapse" id="registerlogininfo">
+                    <a class="btn btn-group " data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-auto-close="outside" data-bs-offset="10,20"><i class="bi bi-person fs-4"></i><span
+                            class="form-label mt-2 ms-2">Login</span></a>
+                    <form class="dropdown-menu p-4">
+                        <div class="mb-3">
+                            <label for="Loginemailsided" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="Loginemailsided"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Loginpasswordsided" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="Loginpasswordsided" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="Remembermeloginsided">
+                                <label class="form-check-label" for="Remembermeloginsided">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <a class="btn btn-group " data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-auto-close="outside" data-bs-offset="10,20"><i class="bi bi-person fs-4"></i><span
+                            class="form-label mt-2 ms-2">Register</span></a>
+                    <form class="dropdown-menu p-4">
+                        <div class="mb-3">
+                            <label for="registernamesided" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="registernamesided" placeholder="Enter Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registeremailsided" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="registeremailsided"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerpasswordsided" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerpasswordsided"
+                                placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- place navbar here -->
+        <div class="container-fluid mb-4 position-relative">
+            <nav class="navbar   navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mainnavbar"
+                        aria-controls="Mainnavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="Mainnavbar">
+                        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false" data-bs-auto-close="outside">All Zones</a>
+                                <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a class="dropdown-item" role="button" href="/Blog/East/blog.html">
+                                            East
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" role="button" href="/Blog/West/blog.html">
+                                            West
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" role="button" href="/Blog/North/blog.html">
+                                            North
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" role="button" href="/Blog/South/blog.html">
+                                            South
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-decoration-underline link-offset-3 link-underline-info"
+                                    aria-current="page" href="/Home/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/Gallery/index.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                        <form class="d-flex me-1" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success " type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+    <!-- Slider -->
+    <div class="container-fluid mb-5">
+        <div id="Slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Slider" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4500">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/981/788/30/egypt-pyramid-desert-old-building-wallpaper-9b96ec3d43017f49c5a44bd94d0c1c20.jpg"
+                        class="d-block w-100 " alt="..." style="max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The Great Pyramid of Giza</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4500">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/390/720/901/darkness-colosseum-italy-cityscape-wallpaper-e9b0086d71bacd5b5677089f5011968d.jpg"
+                        class="d-block w-100" alt="..." style="max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Colosseum in Rome, Italy</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4500">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/757/345/296/india-city-agra-taj-mahal-wallpaper-e9fa5ba4ec75d6fb203de8e88acc8ddc.jpg"
+                        class="d-block w-100" alt="..." style="max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Taj Mahal</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#Slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon position-absolute start-0" aria-hidden="true"></span>
+
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#Slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon position-absolute end-0" aria-hidden="true"></span>
+
+            </button>
+        </div>
+
+    </div>
+    <!-- 7 wonders -->
+    <div class="container-fluid text-center mb-5  p-3 text-black-50"
+        style="background-color: rgba(128, 128, 128, 0.161);" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-easing="linear" data-aos-delay="200">
+        <h4>7 Wonders of the World</h4>
+    </div>
+    <!-- Product slider -->
+    <div class="container-fluid " data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="400"
+        data-aos-easing="linear">
+
+        <div class="row justify-content-center align-items-center my-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 ">
+                <img src="https://c1.wallpaperflare.com/preview/365/58/353/egypt-anubis-judgement-god.jpg"
+                    class=" w-100" style="height: 300px;" alt="Responsive image">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 ">
+                <div class="owl-carousel w-100 ">
+                    <div class="item ">
+                        <img src="https://c1.wallpaperflare.com/preview/817/861/171/pyramid-sky-desert-ancient.jpg"
+                            alt="" style="height: 250px;" class="w-100">
+                    </div>
+                    <div class="item ">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/313/539/787/tower-of-babel-pieter-bruegel-classic-art-tower-wallpaper-preview.jpg"
+                            style="height: 250px;" alt="" class="w-100">
+                    </div>
+                    <div class="item">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/184/538/413/art-painting-ancient-lighthouse-of-alexandria-hd-wallpaper-preview.jpg"
+                            style="height: 250px;" alt="" class="w-100 ">
+                    </div>
+                    <div class="item">
+                        <img src="https://r4.wallpaperflare.com/wallpaper/918/162/535/world-wallpaper-352ae1e3d0cfec1278bdb851b19f928a.jpg"
+                            style="height: 250px;" alt="" class="w-100 ">
+                    </div>
+                    <div class="item">
+                        <img src="https://c1.wallpaperflare.com/path/645/86/471/ephesus-temple-of-artemis-world-s-wonder-ruins-0916b230050b91c0cfe76315a1dcc5ab.jpg"
+                            style="height: 250px;" alt="" class="w-100 ">
+                    </div>
+                    <div class="item">
+                        <img src="https://c1.wallpaperflare.com/path/457/554/395/greek-god-zeus-mythology-sculpture-a76722447f364241c56820a925da9cfb.jpg"
+                            style="height: 250px;" alt="" class="w-100 ">
+                    </div>
+                    <div class="item">
+                        <img src="https://c1.wallpaperflare.com/preview/811/51/825/rhodes-port-mandraki-harbour-entrance.jpg"
+                            style="height: 250px;" alt="" class="w-100 ">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- img hover slider -->
+    <div class="container-fluid  text-center mt-5  p-3 text-black-50"
+        style="background-color: rgba(128, 128, 128, 0.161);" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-easing="linear" data-aos-delay="200">
+        <h4>Ancient Civilizations</h4>
+    </div>
+    <div class="container-fluid p-5 m-auto " data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="500"
+        data-aos-easing="linear">
+        <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+            <div class="item item-7"></div>
+        </div>
+    </div>
+    <section>
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-md-8 " data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                    data-aos-delay="200">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h1 class="text-start py-5 fw-normal">Latest Content</h1>
+                            <div class="col-md-6" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="1000"
+                                data-aos-delay="1100">
+                                <h5 class="text-bg-danger text-white py-2 px-3 w-50 mb-0">Featured Defination</h5>
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/14245.png.webp?v=1705689906"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Ferdinand Magellan</h5>
+                                        <p class="card-text">Ferdinand Magellan, or Fernão de Magalhães (c. 1480-1521),
+                                            was a Portuguese mariner whose expedition was the first to
+                                            circumnavigate the globe in 1519-22...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="1000"
+                                data-aos-delay="2000">
+                                <h5 class="text-bg-danger text-white py-2 px-3 w-50 mb-0">Featured Image</h5>
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/17052.png.webp?v=1676103669"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">The Twelve Labours of Herakles</h5>
+                                        <p class="card-text">A map illustrating the Twelve Labours of Herakles
+                                            (Heracles, romanized as Hercules), probably the most famous of the
+                                            ancient heroes in Greek mythology...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-5 bg-danger text-white my-5" data-aos="zoom-out"
+                        data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1 class="py-2">Free to read for the World Supported by You</h1>
+                                <p class="py-2 fs-5">World History Encyclopedia is a non-profit organization. For only
+                                    $5 per month you can become
+                                    a member and support our
+                                    mission to engage people with cultural heritage and to improve history education
+                                    worldwide.</p>
+                                <div class="d-flex gap-4 ">
+                                    <button class="btn btn-light fw-semibold">Become a Member</button>
+                                    <button class="btn btn-light fw-semibold">Donate Now</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 p-3 d-flex justify-content-center align-items-center ">
+                                <img class="opacity-25 h-auto w-100 "
+                                    src="https://i.pinimg.com/564x/fe/7b/6d/fe7b6dc0aa72375015926754a93a5c85.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5" data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18758.png.webp?v=1712250063"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">The Bombing of Dresden in 1945</h5>
+                                        <p class="card-text">The bomber raid on Dresden was a controversial and highly
+                                            destructive combined operation by Royal Air Force Lancaster
+                                            bombers and United States Air...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5" data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18745.jpg.webp?v=1712250250"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Declaration of Independence</h5>
+                                        <p class="card-text">The Declaration of Independence is the foundational
+                                            document of the United States of America. Written primarily by
+                                            Thomas Jefferson, it explains why...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5" data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18746.jpg.webp?v=1712250129"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Hawker Hurricane</h5>
+                                        <p class="card-text">The Hawker Hurricane was a single-seat fighter plane,
+                                            Britain's first monoplane, which fought in the Battle of Britain
+                                            in the summer of 1940. Slower...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5" data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18718.jpg.webp?v=1712250303"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Mercy Otis Warren</h5>
+                                        <p class="card-text">Mercy Otis Warren (1728-1814) was an American poet,
+                                            playwright, and activist during the era of the American Revolution
+                                            (1765-1789). Through her works...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/10460.jpg.webp?v=1712250306"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Medieval European Literature</h5>
+                                        <p class="card-text">Medieval literature developed in Europe from medieval
+                                            folklore between c. 476 and c. 1500. The works ranged from poetry
+                                            to drama, romance, prose, philosophical...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/969.jpg.webp?v=1712250186"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Ancient Chinese Philosophers</h5>
+                                        <p class="card-text">The philosophers of ancient China developed diverse systems
+                                            of thought, often in conflict with each other, all aiming to
+                                            provide people with the means...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/2160.jpg.webp?v=1712250066"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">History of Buddhism</h5>
+                                        <p class="card-text">Buddhism was established in India by Siddhartha Gautama
+                                            (the Buddha, l. c. 563-c. 483 BCE) and developed between c. 400
+                                            BCE and 383 BCE before it spread...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/5681.jpg.webp?v=1712250123"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Famous Temples of the World</h5>
+                                        <p class="card-text">Temples have been raised in honor of a peoples’ deities
+                                            since before recorded history as evidenced by sites now regarded
+                                            as religious centers including...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18753.jpg.webp?v=1712250243"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Daniel Morgan</h5>
+                                        <p class="card-text">Daniel Morgan (l. c. 1735-1802) was an American
+                                            frontiersman and soldier, most famous for leading a corps of riflemen
+                                            during the American Revolutionary...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/17268.jpg.webp?v=1712250069"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Siege of Savannah</h5>
+                                        <p class="card-text">The Siege of Savannah (16 September to 20 October 1779) was
+                                            a significant engagement in the American Revolutionary War
+                                            (1775-1783). Hoping to retake...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/17326.jpg.webp?v=1711829163"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Napoleon's Campaign in Egypt and Syria</h5>
+                                        <p class="card-text">The French Expedition to Egypt and Syria (1798-1801), led
+                                            by Napoleon Bonaparte, aimed to establish a French colony in
+                                            Egypt and to threaten British...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/c/p/720x404/18467.png.webp?v=1712250364"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">The Roman Republic before the Mithridatic
+                                            Wars, c. 90 BCE</h5>
+                                        <p class="card-text">A map illustrating the geopolitical landscape in the
+                                            Mediterranean on the eve of the Mithridatic Wars (88 - 63 BCE). The
+                                            aftermath of the Punic Wars...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="200">
+
+                                <div class="card border-0">
+
+                                    <img src="https://www.worldhistory.org/img/r/p/1500x1500/18771.jpeg.webp?v=1712157487"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">Gallery of the Château de Chenonceau</h5>
+                                        <p class="card-text">Gallery of the Château de Chenonceau, Loire Valley, France.
+                                            The gallery was commissioned by Catherine de' Medici
+                                            (1519-1599). The gallery is 197 feet long (60 m) and 19.7 feet wide (6 m),
+                                            hosted many lavish parties and is likely to
+                                            have impressed such illustrious visitors as Jean-Jacques Rousseau
+                                            (1712-1778), Harry Truman (1884-1972), and Charles
+                                            Lindbergh (1902-1974).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-5 " data-aos="zoom-out" data-aos-easing="linear"
+                                data-aos-duration="1000" data-aos-delay="900">
+                                <div class="card border-0">
+                                    <img src="https://www.worldhistory.org/img/r/p/1500x1500/18791.png.webp?v=1712254333"
+                                        class="card-img-top" alt="">
+                                    <div class="card-body p-4">
+                                        <h5 class="card-title text-danger">B-17 over Schweinfurt</h5>
+                                        <p class="card-text">A photograph of a USAAF B-17 Flying Fortress over
+                                            Schweinfurt, hit because of its ball-bearing factories in August and
+                                            again in October 1943.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-lg-5 p-md-4 p-sm-5" data-aos="fade-left" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-delay="200">
+                    <div class="container-fluid p-4 mb-3" data-aos="flip-up" data-aos-easing="ease-in-sine"
+                        data-aos-delay="1900" data-aos-duration="500" style="background-color: #f5f5f5;">
+                        <h2 class="pb-2">About Us</h2>
+                        <p class="py-2">We are <mark style="background-color: rgba(251, 196, 94, 0.567);">a non-profit
+                                organization</mark> publishing the world's most read history encyclopedia.</p>
+                        <p class="pb-3">
+                            Our mission is to engage people with cultural heritage and to improve history education
+                            worldwide.
+                        </p>
+                        <button type="button" class="btn btn-danger ">Learn More</button>
+
+                    </div>
+                    <div class="container-fluid mt-5" data-aos="zoom-out" data-aos-easing="ease-in-sine"
+                        data-aos-delay="500" data-aos-duration="200">
+                        <h2 class="pt-5">Media Liabrary</h2>
+                        <div class="d-flex flex-wrap gap-1 mt-3 gimages ">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/18746.jpg.webp?v=1712250129" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/18758.png.webp?v=1712250063" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/18745.jpg.webp?v=1712250250" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/969.jpg.webp?v=1712250186" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/10460.jpg.webp?v=1712250306" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/18467.png.webp?v=1712250364" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/17326.jpg.webp?v=1711829163" alt=""
+                                style="max-width: 150px;">
+                            <img src="https://www.worldhistory.org/img/c/p/720x404/4883.png.webp?v=1712250183" alt=""
+                                style="max-width: 150px;">
+                        </div>
+                        <p class="pt-3 w-75" style="font-size: 18px;">Explore our Media Library with 19,435 images,
+                            videos, and 3D models.</p>
+                        <a type="button" class="btn btn-danger fw-semibold" href="/Gallery/index.html">Veiw Media
+                            Library</a>
+                    </div>
+                    <div class="container-fluid mt-5" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                        data-aos-delay="500" data-aos-duration="200">
+                        <h2 class="pt-5 fs-1">Awards</h2>
+                        <div class="d-flex flex-column align-items-start mt-5">
+                            <div class="py-3">
+                                <img src="https://www.worldhistory.org/images/anthem-24-silver-winnner.png" alt=""
+                                    class="w-100" style="max-width: 220px;">
+                            </div>
+                            <div class="p-3">
+                                <img src="https://www.worldhistory.org/images/ahe-webaward-200x200.png" alt=""
+                                    class="w-100" style="max-width: 220px;">
+                            </div>
+                            <div class="p-3">
+                                <img src="https://www.worldhistory.org/images/lovie-award-badge.png" alt=""
+                                    class="w-100" style="max-width: 300px;">
+                            </div>
+                            <div class="py-3 px-2">
+                                <img src="https://www.worldhistory.org/images/reimagine-edu-shortlisted.png" alt=""
+                                    class="w-100" style="max-width: 220px;">
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <img src="https://www.worldhistory.org/images/award-tutorful-200px.png" alt="" class="w-100"
+                                style="max-width: 220px;">
+                        </div>
+                        <div class="py-3 px-4">
+                            <img src="https://www.worldhistory.org/images/tutorhouse.png" alt="" class="w-100"
+                                style="max-width: 220px;">
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-5" data-aos="zoom-out" data-aos-easing="ease-in-sine"
+                        data-aos-delay="500" data-aos-duration="200">
+                        <h2 class="pt-5 pb-3">Statistics</h2>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">2,600</b> <span
+                                class="text-dark-emphasis ps-3">definitions</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">1,388</b> <span
+                                class="text-dark-emphasis ps-3">articles</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">16,643
+                            </b> <span class="text-dark-emphasis ps-3">illustrations</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">2,380</b> <span
+                                class="text-dark-emphasis ps-3">videos</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">412</b> <span
+                                class="text-dark-emphasis ps-3">3D images</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">8,034</b> <span
+                                class="text-dark-emphasis ps-3">translations</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">894</b> <span
+                                class="text-dark-emphasis ps-3">contributors</span></p>
+                        <p class="ps-3 fs-5 mb-1"><b class="fw-semibold">38,420</b> <span
+                                class="text-dark-emphasis ps-3">registered users</span></p>
+                    </div>
+                    <div class="container-fluid mt-5 p-5" data-aos="flip-up" data-aos-easing="ease-in-sine"
+                        data-aos-delay="500" data-aos-duration="200">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card h-100 border-0 " style="background-color: #f5f5f5">
+                                    <img src="https://www.worldhistory.org/template/images/newsletter_banner.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body pe-5">
+                                        <h6 class="text-bg-dark p-1 ps-2">Free Newsletter</h6>
+                                        <p class="text-muted fs-5 fw-normal">Our latest articles delivered to your
+                                            inbox, once a week:</p>
+                                        <form action="">
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter your email address" aria-label="Email address">
+                                            <p class="text-muted fs-5 fw-normal">Are you a...?</p>
+                                            <div>
+                                                <input type="radio" name="identity" id="">
+                                                <label for="identity" class="ms-2">History Enthusiast</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="identity" id="" value="student">
+                                                <label for="identity" class="ms-2">Student</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="identity" id="">
+                                                <label for="identity" class="ms-2">Teacher</label>
+                                            </div>
+
+                                            <div>
+                                                <input type="radio" name="identity" id="">
+                                                <label for="identity" class="ms-2">Librarian</label>
+
+
+                                            </div>
+
+                                            <button type="submit" class="btn btn-danger mt-3">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid p-5 d-flex justify-content-center align-items-center" style="background-color: #f5f5f5"
+        data-aos="fade-down" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="200">
+        <div class="w-75">
+            <p class="text-center">Numerous educational institutions recommend us, including <b>Oxford University.</b>
+                Our publication has been reviewed for
+                educational use by <b>Common Sense Education, Internet Scout (University of Wisconsin), Merlot
+                    (California State
+                    University), OER Commons and the School Library Journal.</b> Please note that some of these
+                recommendations are listed under
+                our old name, Ancient History Encyclopedia.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid p-5" style="background-color: #f3f3f3">
+            <div class="row">
+                <div class="col-md-4 border-end">
+                    <img src="https://www.worldhistory.org/template/images/header/whe-logo.svg" alt="" class="w-100"
+                        style="max-width: 220px;">
+                    <div class="mt-3">
+                        <h5>Our Mission</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam corporis laboriosam
+                            perferendis facere earum minima saepe totam aspernatur consequuntur vero.</p>
+                    </div>
+                    <h5 class="mt-3">Follow Us</h5>
+                    <div class=" d-flex justify-content-start align-items-center gap-4">
+                        <a href=""><i class="bi bi-facebook fs-3"></i></a>
+                        <a href=""><i class="bi bi-twitter fs-3"></i></a>
+                        <a href=""><i class="bi bi-linkedin fs-3"></i></a>
+                        <a href=""><i class="bi bi-github fs-3"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 border-end">
+                    <div class="container-fluid px-5">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled mt-4 " id="footer_links">
+                            <li class="my-2 "><a href="">Home</a></li>
+                            <li class="my-2 "><a href="">Gallery</a></li>
+                            <li class="my-2 "><a href="">Blog</a></li>
+                            <li class="my-2 "><a href="">About</a></li>
+                            <li class="my-2 "><a href="">Contact Us</a></li>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-center">Contact Us</h4>
+                    <div class="d-flex justify-content-center align-items-center gap-3 my-4">
+                        <i class="bi bi-telephone-fill fs-3"></i>
+                        <p class="m-0">123-456-7890</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center gap-3 my-4">
+                        <i class="bi bi-envelope-fill fs-3"></i>
+                        <p class="m-0">abc@example.com</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center gap-3 my-4">
+                        <i class="bi bi-geo-alt-fill fs-3"></i>
+                        <p class="m-0">123 Main Street, Anytown USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-3 bg-black text-white ">
+            <div class="d-flex align-items-center justify-content-center">
+                <p class="m-0">Developed by: <span class="text-decoration-underline text-primary mx-3"> M.Arsalan
+                        Warsi</span> Copyright © 2024. All
+                    Rights reserved.</p>
+
+            </div>
+
+
+
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                center: true,
+                margin: 15,
+                nav: false,
+                dots: false,
+                dotsEach: false,
+                autoplay: true,
+                autoHeight: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: false,
+                URLhashListener: true,
+                startPosition: 'URLHash',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        });
+
+    </script>
+</body>
+
+</html>
