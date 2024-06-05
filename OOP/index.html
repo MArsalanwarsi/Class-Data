@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="p-5">
+        <div class="container">
+            <h1 class="text-center">Registration Form</h1>
+        </div>
+        <div class="container-fluid p-5">
+            <form action="">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="reg_email" placeholder="name@example.com">
+                    <label for="reg_email">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="reg_pass" placeholder="Password">
+                    <label for="reg_pass">Password</label>
+                </div>
+                <button type="submit" class="btn btn-primary" id="reg_btn">Register</button>
+            </form>
+        </div>
+        <div class="container">
+            <h1 class="text-center">Login Form</h1>
+        </div>
+        <div class="container-fluid p-5">
+            <form action="">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="log_email" placeholder="name@example.com">
+                    <label for="log_email">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="log_pass" placeholder="Password">
+                    <label for="log_pass">Password</label>
+                </div>
+                <button type="submit" class="btn btn-primary" id="log_btn">Login In</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script>
+        class validation {
+            validate(email, password) {
+                if (email == "") {
+                    alert("Email cannot be empty");
+                }
+                else if (password == "") {
+                    alert("Password cannot be empty");
+                }
+            }
+        }
+        class form {
+            register(email,pass) {
+                localStorage.setItem("email",email);
+                localStorage.setItem("password",pass);
+                alert("registeration succesfull");
+                window.location.reload();
+            }
+            login(email,pass) {
+                let local_email = localStorage.getItem("email");
+                let local_pass = localStorage.getItem("password");
+                if (email == local_email && pass == local_pass) {
+                    alert("Login Successful");
+                    window.location.reload();
+                }
+                else {
+                    alert("Login Failed");
+                }
+            }
+        }
+
+        let validation_obj = new validation();
+        let form_obj = new form();
+
+        document.getElementById("reg_btn").addEventListener("click", function (e) {
+            e.preventDefault();
+            let email = document.getElementById("reg_email").value;
+            let pass = document.getElementById("reg_pass").value;
+            validation_obj.validate(email,pass);
+            form_obj.register(email,pass);
+        });
+        document.getElementById("log_btn").addEventListener("click", function (e) {
+            e.preventDefault();
+            let email = document.getElementById("log_email").value;
+            let pass = document.getElementById("log_pass").value;
+            validation_obj.validate(email, pass);
+            form_obj.login(email, pass);
+        });
+    </script>
+</body>
+
+</html>
