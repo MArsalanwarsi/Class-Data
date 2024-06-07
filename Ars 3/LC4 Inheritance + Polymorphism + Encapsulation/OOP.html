@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class controller{
+            name;
+            email;
+            password;
+            constructor(name,email,password){
+                this.name = name;
+                this.email = email;
+                this.password = password;
+            }
+
+            demo(){
+                document.write("Name "+this.name + "<br>Email "+this.email + "<br>Password "+this.password + "<br><br>")
+            }
+
+            static myStaticMethod(){
+                document.write("My Static Method")
+            }
+        }
+
+        var obj = new controller("Abc","Abc@gmail.com","Abc123");
+        obj.demo()
+
+        var ali = new controller("Ali","Ali@gmail.com","Ali123");
+        ali.demo()
+
+        // controller.myStaticMethod()
+    </script>
+
+
+</body>
+</html>

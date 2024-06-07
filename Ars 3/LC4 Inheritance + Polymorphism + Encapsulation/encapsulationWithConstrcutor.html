@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        class Encapsulation{
+
+            name;
+            email;
+
+           constructor(name,email){
+                this.name = name
+                this.email = email
+           }
+
+            GetName(){
+                return this.name.toUpperCase()
+            }
+
+            GetEmail(){
+                return this.email.toUpperCase()
+            }
+
+        }
+        var obj = new Encapsulation("Faiz","Faiz@gmail.com")
+
+        document.write(obj.GetName() + obj.GetEmail())
+
+    </script>
+</body>
+</html>

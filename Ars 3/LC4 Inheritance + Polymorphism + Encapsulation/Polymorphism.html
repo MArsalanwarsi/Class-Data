@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        class Animal{
+
+            Run(){
+                document.write("This Animal Run <br>")
+            }
+
+            Walk(){
+                document.write("This Animal Walk <br>")
+            }
+
+            Fly(){
+                document.write("This Thing Is Fly <br>")
+            }
+
+            Legs(){
+                document.write("This Thing Have 4 Legs <br>")
+            }
+        }
+
+
+
+        class Cat extends Animal{
+
+
+        }
+
+
+        class Hen extends Animal{
+            
+            Legs(){
+                document.write("This Thing Have 2 Legs <br>")
+            }
+        }
+
+        var cat = new Cat();
+        cat.Run()
+        cat.Walk();
+        cat.Legs();
+
+        var hen = new Hen();
+        hen.Fly()
+        hen.Legs()
+        hen.Run()
+        hen.Walk();
+
+    </script>
+</body>
+</html>

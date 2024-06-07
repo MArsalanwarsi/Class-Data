@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="record">
+    </p>
+    <script>
+        class controller{
+            name;
+            email;
+            password;
+            
+            constructor(name,email,password){
+                this.name = name;
+                this.email = email;
+                this.password = password; 
+            }
+
+            Attendance(attendance){
+                this.attendance = attendance
+            }
+
+            show(){
+                return "Name "+this.name + "<br>Email "+this.email + "<br>Password "+this.password
+            }
+        }
+
+        class Student extends controller{
+            constructor(name,email,password,designation){
+                super(name,email,password)
+                this.designation = designation
+            }
+            select(){
+                return this.show() + "<br> Designation:"+this.designation
+            }
+        }
+
+        class Faculty extends controller{
+
+            constructor(name,email,password,designation,attendance){
+                super(name,email,password)
+                this.Attendance(attendance)
+                this.designation = designation
+            }
+
+            select(){
+                return this.show() + "<br> Designation:"+this.designation+"<br> Attendance" + this.attendance
+            }
+
+        }
+
+        var abc = new Student("Abc","Abc@gmail.com","Abc123","Student")
+
+        var faiz = new Faculty("Faiz","Faiz@gmail.com","Faiz123","Faculty",24)
+        
+        document.getElementById("record").innerHTML = abc.select() + "<br><br>" + faiz.select()
+    </script>
+</body>
+</html>

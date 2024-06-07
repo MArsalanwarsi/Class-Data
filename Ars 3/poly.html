@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="student" style="padding: 20px;"></p>
+    <p class="faculty" style="padding: 20px;"></p>
+
+    <script>
+        class data {
+            name;
+            email;
+            password;
+            designation;
+            constructor(name,email,password,designation){
+                this.name=name;
+                this.email=email;
+                this.password=password;
+                this.designation=designation;
+            }
+            show(){
+                return `Name: ${this.name}<br>Email: ${this.email}<br>Password: ${this.password}<br>Designation: ${this.designation}`
+            }
+
+        }
+        class student extends data {
+            constructor(name,email,password,designation,attentance,fees){
+                super(name,email,password,designation);
+                this.attentance=attentance;
+                this.fees=fees;
+            }
+            show_student(){
+                return `${this.show()}<br>Attendance: ${this.attentance}<br>Fees: ${this.fees}`
+            }
+        }
+        class faculty extends data{
+            constructor(name,email,password,designation,attentance,salary){
+                super(name,email,password,designation);
+                this.attentance=attentance;
+                this.salary=salary;
+            }
+            show_faculty(){
+                return `${this.show()}<br>Attendance: ${this.attentance}<br>Salary: ${this.salary}`
+            }
+        }
+        var student1=new student("ahmed","ahmed@gmail.com","ahmed123","student","24days","25000RS");
+        var faculty1=new faculty("faraz","faraz@gmail.com","faraz123","Teacher","30days","100000")
+        document.querySelector(".student").innerHTML=student1.show_student();
+        document.querySelector(".faculty").innerHTML=faculty1.show_faculty()
+    </script>
+</body>
+</html>
