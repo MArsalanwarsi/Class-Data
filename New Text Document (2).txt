@@ -1,0 +1,265 @@
+Oracle
+1995 
+c OR c++
+
+MYSQL: Abbrivation Is MY STRUCTURED QUERY LANGUAGE
+
+DBMS:- Database Managment System
+RDBMS:- Relational Database Managment System
+
+Sofware Name:
+
+XAMMP -> Apache Server
+WAXXP -> Apache Server
+
+Make Data Relational With Multiple Table
+PRIMARY KEY 
+FOREIGN KEY
+UNIQUE KEY 
+
+Operations In MYSQL:
+THERE ARE TWO TYPES OF OPERATION
+DDL OPERATION
+	DATA DEFINATION LANGUAGE
+	DDL IS WORKING ON DATABASE AND TABLE STRUCTURE
+	1 CREATE
+		CREATE DATABASE pr2_2023_09e
+		
+		CREATE TABLE registers(
+			id int(11) PRIMARY KEY AUTO_INCREMENT,
+			name varchar(255),
+			email varchar(255),
+			password varchar(255)
+		)
+
+	2 ALTER
+		ADD
+			ALTER TABLE registers ADD status varchar(255)	-- ADD New COLUMN
+			ALTER TABLE registers ADD unique(email)		-- ADD UNIQUE KEY
+		MODIFY
+			ALTER TABLE registers MODIFY name varchar(50)	-- MODIFY COLUMN RANGE
+		DROP
+			ALTER TABLE registers DROP status		-- DELETE COLUMN
+
+		
+		
+	3 DROP    	Table / Database Delete
+			DROP TABLE demo
+
+	4 TRUNCATE
+			TRUNCATE TABLE users
+	5 RENAME
+			RENAME TABLE users TO registers
+			
+	6 COMMENT
+		-- DROP TABLE users
+DML OPERATION
+	DATA MANUPLASTION LANGUAGE
+	DML IS WORKING ON DATA
+	
+	1 SELECT
+		SELECT id,email,password FROM users
+		SELECT id,email,password FROM users WHERE id = 2
+	2 INSERT
+		INSERT INTO users(COLUMNS NAME)VALUES(VALUES)
+		INSERT INTO users(name,email,password)VALUES('Abc','Abc@gmail.com','Abc123');
+		INSERT INTO users(name,email,password)VALUES('Abc','Abc@gmail.com','Abc123');
+
+		INSERT INTO users(name,email,password)VALUES
+		('Ali','Ali@gmail.com','Ali321'),
+		('Ahmed','Ahmed@gmail.com','Ahmed321'),
+		('Bilal','Bilal@gmail.com','Bilal321')
+	3 UPDATE
+UPDATE registers SET name = "Updated Name" WHERE id = 2
+UPDATE registers SET email = "Ali@gmail.com",password = "Ali321" WHERE id = 2
+UPDATE users SET status = "verified"
+
+	4 DELETE
+		DELETE FROM registers WHERE id IN(1,4)
+CLAUSES:
+	SELECT
+	FROM 
+	WHERE -> WHERE CLAUSE IS USED FOR MAKE Condition
+KEYWORDS:
+	
+	SELECT id,email,password FROM users WHERE id = 2
+ 	SELECT id,email,password FROM users WHERE name = 'Ali'
+ 	SELECT id,email,password FROM users WHERE name = 'Ahmed';
+  	SELECT id,email,password FROM users WHERE id <= 3;
+  	SELECT id,email,password FROM users WHERE id = 3;
+  	SELECT id,email,password FROM users WHERE id < 4;
+
+IN()	
+	Show Particular Data
+	SELECT id,email,password FROM users WHERE id IN(1,4);
+NOT IN()
+	Show All Other Data Without Mentioned Record
+  	SELECT id,email,password FROM users WHERE name NOT IN('Abc','Ahmed')
+
+ALIAS	Change Column name Temprary
+	AS 
+	SELECT name AS 'Student_Name',email AS 'Student_Email' FROM users
+LIMIT:
+	SELECT * FROM users LIMIT 2
+
+ORDER BY CLAUSE 
+	ASC	ASCENDING A-Z
+	DESC	DECENDING Z-A
+
+	SELECT * FROM users ORDER BY id ASC LIMIT 2
+	SELECT * FROM users ORDER BY id DESC
+ORDER BY WITH LIMIT:
+	SELECT * FROM users ORDER BY id ASC LIMIT 2
+
+BETWEEN: Get Data Into Range
+	SELECT * FROM users WHERE id BETWEEN 1 AND 3
+
+	SELECT * FROM users WHERE doj BETWEEN '2024-06-01' AND '2024-06-30'
+	SELECT * FROM users WHERE doj BETWEEN '2024-05-01' AND '2024-05-30'
+	
+ADD COLUMN WITH DEFAULT:
+	ALTER TABLE users ADD status varchar(255) DEFAULT 'unverified'
+  	
+
+LOGICAL OPERATORS
+	AND
+		SELECT * FROM users WHERE email = "Abc@gmail.co" AND password = "Abc123"
+	OR
+		SELECT * FROM `users` WHERE city = "DHA" OR city = "SADDAR"
+	NOT
+		SELECT * FROM `users` WHERE city != "DHA"   
+
+MAKE FOREIGN KEY:
+
+create table orders(
+	order_id int(11) PRIMARY KEY AUTO_INCREMENT,
+	p_name varchar(100),
+	p_qty int(11),
+	p_price int(11),
+	date_of_order timestamp;
+	user_id int(11),
+
+	FOREIGN KEY (user_id) REFERENCES users(id)
+)
+
+JOINS:
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+CROSS JOIN 
+
+
+
+INNER JOIN QUERY
+
+select users.name,orders.p_name,orders.p_qty,orders.date_of_order
+from users
+INNER JOIN orders ON orders.user_id = users.id
+
+
+CREATE TABLE shipment(
+	shipment_id int(11) PRIMARY KEY AUTO_INCREMENT,
+    user_id int(11),
+    shipment_status varchar(100) DEFAULT 'Pending',
+    FOREIGN KEY (user_id) REFERENCES orders(user_id)
+)
+
+Joins With 2 Tables
+
+SELECT orders.p_name,shipment.shipment_status
+FROM orders
+INNER JOIN shipment ON shipment.user_id = orders.user_id
+
+Joins With 3 Tables
+
+SELECT users.name,orders.p_name,shipment.shipment_status
+FROM users
+INNER JOIN orders ON orders.user_id = users.id
+INNER JOIN shipment ON shipment.user_id = orders.user_id
+
+
+
+
+
+
+
+
+CREATE TABLE course(
+	course_id int(11) PRIMARY KEY AUTO_INCREMENT,
+    course_name varchar(100)
+);
+
+CREATE TABLE faculty(
+	faculty_id int(11) PRIMARY KEY AUTO_INCREMENT,
+    faculty_name varchar(100),
+    course_id int(11),
+    FOREIGN KEY (course_id) REFERENCES course(course_id)
+)
+
+
+
+INSERT INTO course (course_name)VALUES
+("CPISM"),
+("DISM"),
+("HDSE")
+
+
+INNER JOIN 
+
+SELECT faculty.faculty_name,course.course_name
+FROM faculty
+INNER JOIN course ON faculty.course_id = course.course_id
+
+RIGHT JOIN:
+
+SELECT faculty.faculty_name,course.course_name
+FROM faculty
+RIGHT JOIN course ON faculty.course_id = course.course_id
+
+LEFT JOIN :
+
+SELECT faculty.faculty_name,course.course_name
+FROM faculty
+LEFT JOIN course ON faculty.course_id = course.course_id
+
+CROSS JOIN:
+
+SELECT faculty.faculty_name,course.course_name
+FROM faculty
+CROSS JOIN course
+
+
+DEFAULT JOIN :
+
+SELECT faculty.faculty_name,course.course_name
+FROM faculty
+JOIN course ON faculty.course_id = course.course_id
+
+
+
+VIRTUAL TABLE / VIEWS:
+Make Virtual Table In Database
+usage:
+	make query Shorter and reusable
+
+
+CREATE VIEW FacultyCourseDetail
+	AS 
+		SELECT faculty.faculty_name,course.course_name
+        FROM faculty
+        JOIN course ON faculty.course_id = course.course_id
+
+
+
+ALTER -> MODIFY VIEW
+
+ALTER VIEW FacultyCourseDetail
+	AS 
+		SELECT faculty.faculty_name,course.course_name
+        FROM faculty
+        JOIN course ON faculty.course_id = course.course_id
+        WHERE faculty_id = 5
+
+
+DELETE VIEW:
+DROP VIEW facultycoursedetail
